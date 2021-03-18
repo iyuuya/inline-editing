@@ -1,7 +1,6 @@
 import React from 'react';
 import * as actions from './actions';
 import { UtilityBarItem, FieldToggleItem } from '../UtilityBar/';
-import { Consumer } from '../Common/HoverContext';
 import { Section, Group, Element } from '../index';
 import { AboutCard } from './AboutCard';
 import './AboutSection.css';

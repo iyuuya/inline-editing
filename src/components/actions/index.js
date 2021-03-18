@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 const move = (arr, from, offset) => {
 	arr.splice((from + offset: 1), 0, arr.splice(from, 1)[0]);

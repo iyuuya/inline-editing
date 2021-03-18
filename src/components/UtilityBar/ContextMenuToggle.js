@@ -1,5 +1,5 @@
 import React from 'react';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import ReactTooltip from 'react-tooltip';
 import { ContextMenu } from './ContextMenu';
 import { AnimateIn, moreIcon } from '../Common';

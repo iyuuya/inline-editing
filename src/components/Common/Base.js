@@ -16,7 +16,12 @@ export class Base extends PureComponent {
 		} = this.props;
 		const classNames = cx(
 			'base',
-			{ hover: isHovered, selected: isSelected, overlay, danger },
+			{
+				hover: isHovered,
+				selected: isSelected,
+				danger: danger && isHovered,
+				overlay
+			},
 			className
 		);
 		return (

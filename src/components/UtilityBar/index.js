@@ -17,8 +17,11 @@ export const UtilityBar = ({
 }) => {
 	return (
 		<Consumer>
-			{({ showOverlay, hideOverlay, danger }) => {
-				const classNames = cx('utility-bar', { vertical, danger });
+			{({ showOverlay, hideOverlay, danger, isHovered }) => {
+				const classNames = cx('utility-bar', {
+					vertical,
+					danger: danger && isHovered
+				});
 
 				return Boolean(actions.length || fields.length) ? (
 					<div className="utility-bar-wrapper">

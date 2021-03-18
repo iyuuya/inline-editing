@@ -1,8 +1,8 @@
 .add-button {
 	background-color: #1a76d2;
 	border-radius: 100px;
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	border: none;
 	outline: none;
 	justify-content: center;
@@ -28,11 +28,11 @@
 }
 
 .add-button-wrapper.top {
-	top: -20px;
+	top: -30px;
 }
 
 .add-button-wrapper.bottom {
-	bottom: -20px;
+	bottom: -30px;
 }
 
 .website:hover .add-button-wrapper {

@@ -1,5 +1,5 @@
 import React from 'react';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import ReactTooltip from 'react-tooltip';
 import { Field, Base } from './';
 import { Consumer } from './HoverContext';
@@ -22,7 +22,7 @@ export class Section extends React.Component {
 								overlay={overlay}
 								danger={danger}
 								isSelected={isSelected}>
-								{Boolean(index < 1) &&
+								{Boolean(index + 1) &&
 									!danger &&
 									!overlay && (
 										<React.Fragment>
@@ -36,19 +36,6 @@ export class Section extends React.Component {
 										</React.Fragment>
 									)}
 								{this.props.children}
-								{Boolean(index + 1) &&
-									!danger &&
-									!overlay && (
-										<React.Fragment>
-											<div
-												className="add-button-wrapper bottom"
-												data-for={id2}
-												data-tip="Add section">
-												<AddButton addItem={this.props.addSection} />
-											</div>
-											<ReactTooltip id={id2} effect="solid" />
-										</React.Fragment>
-									)}
 							</Base>
 						);
 					}}

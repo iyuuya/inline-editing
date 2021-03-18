@@ -1,8 +1,6 @@
 import React from 'react';
 import { AnimateIn } from './AnimateIn';
 import { getSelectionCoords } from '../../utils';
-import { Field } from './Field';
-import { Consumer } from './HoverContext';
 import { ContentState, convertToRaw } from 'draft-js';
 import { MegadraftEditor, editorStateFromRaw, Toolbar } from 'megadraft';
 import 'megadraft/dist/css/megadraft.css';

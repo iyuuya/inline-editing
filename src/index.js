@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import * as actions from './components/actions';
 import animate, { delay, stop } from './components/AddSection/animate';
 import {
@@ -58,10 +58,6 @@ class App extends React.Component {
 		delay(100).then(this.animateIn);
 	};
 
-	scrollToSection = section => {
-		if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	};
-
 	animateIn = () => {
 		animate({
 			elements: '.widget-preview-wrapper',
@@ -98,6 +94,10 @@ class App extends React.Component {
 		this.setState(actions.moveRight(id), () => {
 			this.scrollToSection(section);
 		});
+	};
+
+	scrollToSection = section => {
+		section && section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	};
 
 	render() {

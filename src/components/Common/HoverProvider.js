@@ -60,17 +60,11 @@ export class HoverProvider extends React.Component {
 		const field = e.target.closest('.field');
 		const section = e.target.closest('.section');
 		this.setState({ selectedField: field, selectedSection: section });
-		if (e.target.className === 'utility-bar-item trash') {
-			this.setState({ danger: false });
-		}
-	};
-
-	scrollToSection = e => {
-		const section = e.target.closest('.section');
-		const up = e.target.closest('.up');
-		const down = e.target.closest('.down');
-		if (section && (up || down)) {
-			section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		if (
+			e.target.parentNode.className.includes &&
+			e.target.parentNode.className.includes('utility-bar')
+		) {
+			this.setState({ danger: false, overlay: false });
 		}
 	};
 
